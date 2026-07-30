@@ -22,10 +22,13 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
 
-      - name: Run Android Domain Unit Tests
+      - name: Run Android App Unit Tests
         run: |
           cd BiasSenseAI
-          gradle test --no-daemon
+          gradle :app:testDebugUnitTest --no-daemon

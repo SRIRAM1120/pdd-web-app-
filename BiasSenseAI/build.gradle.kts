@@ -4,3 +4,8 @@ plugins {
     id("org.jetbrains.kotlin.plugin.compose") version "2.2.0" apply false
     id("com.google.gms.google-services") version "4.4.3" apply false
 }
+
+tasks.register("test") {
+    dependsOn(":app:testDebugUnitTest")
+}
+
