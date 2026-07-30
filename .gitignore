@@ -1,0 +1,12 @@
+node_modules
+dist
+dev-dist
+.env
+.env.local
+.chrome-check
+.chrome-pdf-check
+*.log
+*.tsbuildinfo
+test-results
+.pytest_cache
+__pycache__

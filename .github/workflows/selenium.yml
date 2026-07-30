@@ -1,0 +1,59 @@
+name: Selenium E2E Tests
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  selenium-tests:
+    name: Headless Chrome Selenium E2E
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Node Dependencies
+        run: npm install
+
+      - name: Build Web Application
+        run: npm run build
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Python Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r selenium_model/requirements.txt pytest-html
+
+      - name: Start Production Preview Server
+        run: |
+          npx vite preview --host 127.0.0.1 --port 5174 &
+          npx wait-on http://127.0.0.1:5174 --timeout 30000
+
+      - name: Run Selenium E2E Tests
+        run: |
+          pytest selenium_model/tests/test_e2e.py --html=test-results/selenium-report.html --self-contained-html
+
+      - name: Upload Test Report Artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: selenium-test-report
+          path: |
+            test-results/selenium-report.html
+            selenium_model/evidence/
+            selenium_model/screenshots/

@@ -1,0 +1,92 @@
+[
+  {
+    "test_id": "test_smoke_login_page_renders",
+    "module": "test_e2e",
+    "scenario": "test smoke login page renders",
+    "expected": "Requested behavior operates without browser errors",
+    "actual": "Behavior matched expectation",
+    "status": "PASSED",
+    "duration": 1.941,
+    "screenshot": "selenium_model\\screenshots\\test_smoke_login_page_renders_passed.png"
+  },
+  {
+    "test_id": "test_invalid_login_is_handled",
+    "module": "test_e2e",
+    "scenario": "test invalid login is handled",
+    "expected": "Requested behavior operates without browser errors",
+    "actual": "Behavior matched expectation",
+    "status": "PASSED",
+    "duration": 3.321,
+    "screenshot": "selenium_model\\screenshots\\test_invalid_login_is_handled_passed.png"
+  },
+  {
+    "test_id": "test_signup_mandatory_validation",
+    "module": "test_e2e",
+    "scenario": "test signup mandatory validation",
+    "expected": "Requested behavior operates without browser errors",
+    "actual": "Behavior matched expectation",
+    "status": "PASSED",
+    "duration": 1.646,
+    "screenshot": "selenium_model\\screenshots\\test_signup_mandatory_validation_passed.png"
+  },
+  {
+    "test_id": "test_forgot_password_form",
+    "module": "test_e2e",
+    "scenario": "test forgot password form",
+    "expected": "Requested behavior operates without browser errors",
+    "actual": "Behavior matched expectation",
+    "status": "PASSED",
+    "duration": 1.256,
+    "screenshot": "selenium_model\\screenshots\\test_forgot_password_form_passed.png"
+  },
+  {
+    "test_id": "test_protected_workspace_redirects_anonymous_user",
+    "module": "test_e2e",
+    "scenario": "test protected workspace redirects anonymous user",
+    "expected": "Requested behavior operates without browser errors",
+    "actual": "Behavior matched expectation",
+    "status": "PASSED",
+    "duration": 1.116,
+    "screenshot": "selenium_model\\screenshots\\test_protected_workspace_redirects_anonymous_user_passed.png"
+  },
+  {
+    "test_id": "test_legal_links_render",
+    "module": "test_e2e",
+    "scenario": "test legal links render",
+    "expected": "Requested behavior operates without browser errors",
+    "actual": "Behavior matched expectation",
+    "status": "PASSED",
+    "duration": 1.967,
+    "screenshot": "selenium_model\\screenshots\\test_legal_links_render_passed.png"
+  },
+  {
+    "test_id": "test_pwa_manifest_is_valid",
+    "module": "test_e2e",
+    "scenario": "test pwa manifest is valid",
+    "expected": "Requested behavior operates without browser errors",
+    "actual": "Behavior matched expectation",
+    "status": "PASSED",
+    "duration": 0.021,
+    "screenshot": ""
+  },
+  {
+    "test_id": "test_static_assets_and_links_are_not_broken",
+    "module": "test_e2e",
+    "scenario": "test static assets and links are not broken",
+    "expected": "Requested behavior operates without browser errors",
+    "actual": "Behavior matched expectation",
+    "status": "PASSED",
+    "duration": 0.071,
+    "screenshot": ""
+  },
+  {
+    "test_id": "test_accessibility_basics",
+    "module": "test_e2e",
+    "scenario": "test accessibility basics",
+    "expected": "Requested behavior operates without browser errors",
+    "actual": "Behavior matched expectation",
+    "status": "PASSED",
+    "duration": 1.287,
+    "screenshot": "selenium_model\\screenshots\\test_accessibility_basics_passed.png"
+  }
+]

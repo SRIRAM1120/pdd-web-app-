@@ -1,0 +1,8 @@
+[
+  {
+    "level": "WARNING",
+    "message": "http://127.0.0.1:5174/signin - <meta name=\"apple-mobile-web-app-capable\" content=\"yes\"> is deprecated. Please include <meta name=\"mobile-web-app-capable\" content=\"yes\">",
+    "source": "other",
+    "timestamp": 1785402898007
+  }
+]
