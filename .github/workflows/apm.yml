@@ -22,12 +22,10 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+
       - name: Run Android Domain Unit Tests
         run: |
           cd BiasSenseAI
-          if [ -f "./gradlew" ]; then
-            chmod +x gradlew
-            ./gradlew test --no-daemon
-          else
-            gradle test --no-daemon
-          fi
+          gradle test --no-daemon

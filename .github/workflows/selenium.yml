@@ -42,7 +42,7 @@ jobs:
       - name: Start Production Preview Server
         run: |
           npx vite preview --host 127.0.0.1 --port 5174 &
-          npx wait-on http://127.0.0.1:5174 --timeout 30000
+          npx --yes wait-on http://127.0.0.1:5174 --timeout 30000
 
       - name: Run Selenium E2E Tests
         run: |
